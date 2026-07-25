@@ -216,7 +216,10 @@ The project includes an interactive **Customer Churn & Retention Analytics Dashb
 The dashboard enables business users to monitor customer churn, analyze churn by contract type, and interactively filter customers by payment method for deeper insights.
 
 ---
+## 📸 Dashboard
 
+![Customer Churn Dashboard](screenshots/Telco_Churn_Dashboard.png)
+---
 # 💡 Key Insights
 
 - Approximately **26.54%** of customers have churned.
