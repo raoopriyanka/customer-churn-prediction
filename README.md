@@ -238,7 +238,7 @@ git clone https://github.com/raoopriyanka/customer-churn-prediction.git
 ## Navigate to Project
 
 ```bash
-cd Telecom-Customer-Churn-Prediction
+cd churn-prediction
 ```
 
 ## Install Dependencies
@@ -324,7 +324,7 @@ Example Dashboard Components:
 B.Tech Information Technology — Rajiv Gandhi Institute of Technology (Mumbai University)
 
 * GitHub: https://github.com/raoopriyanka
-* LinkedIn: https://www.linkedin.com/in/priyankarao-1506p/
+* LinkedIn: https://www.linkedin.com/in/priyankarao-1506p
 
 ---
 
