@@ -1,233 +1,332 @@
-# 📞 Telco Customer Churn & Retention Analytics
+# 📞 Telecom Customer Churn Prediction & Retention Analytics
 
-An end-to-end **Machine Learning + Business Intelligence** project that predicts telecom customer churn using a **Random Forest Classifier** and presents actionable retention insights through an **interactive Power BI dashboard**.
+An end-to-end Machine Learning project that predicts whether a telecom customer is likely to churn using the **IBM Telco Customer Churn Dataset**. The project follows the complete machine learning lifecycle, including data preprocessing, exploratory data analysis (EDA), feature engineering, model training, hyperparameter tuning, evaluation, feature importance analysis, customer churn prediction, and business intelligence visualization using **Power BI**.
 
 ---
 
 ## 📌 Project Overview
 
-Customer churn is a major revenue risk for telecom companies. This project combines:
+Customer churn is a major challenge for telecom companies because acquiring new customers is significantly more expensive than retaining existing ones. By leveraging machine learning, businesses can identify customers who are at high risk of leaving and implement targeted retention strategies.
 
-* **Python + Scikit-learn** for data preprocessing, model training, evaluation, and prediction.
-* **Power BI** for interactive business analytics and churn monitoring.
-
-The dashboard enables business users to track churn KPIs, analyze churn by contract type, and filter results by payment method.
+This project combines predictive analytics with interactive business intelligence to help stakeholders understand churn trends and make informed decisions.
 
 ---
 
 ## 🎯 Objectives
 
-* Predict whether a customer is likely to churn.
-* Identify the most influential churn drivers.
-* Evaluate model performance using standard classification metrics.
-* Provide an interactive dashboard for retention analysis.
-* Enable predictions for new customer records.
+- Predict customer churn using historical telecom customer data.
+- Identify the most influential factors contributing to churn.
+- Evaluate the performance of a Random Forest classification model.
+- Visualize customer churn metrics and trends using Power BI.
+- Provide actionable insights to improve customer retention.
 
 ---
 
 ## 🛠️ Tech Stack
 
-### Programming & ML
+### Programming Language
+- Python
 
-* Python 3.x
-* Pandas
-* NumPy
-* Scikit-learn
-* Matplotlib
-* Joblib
+### Libraries
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
+- Joblib
 
-### Business Intelligence
+### Machine Learning
+- Random Forest Classifier
+- GridSearchCV
 
-* Microsoft Power BI Desktop
+### Visualization
+- Microsoft Power BI
+
+### Development Environment
+- Visual Studio Code
+- Jupyter Notebook
 
 ---
 
 ## 📂 Project Structure
 
-```text
+```
 CHURN-PREDICTION/
 │
 ├── dashboard/
-│   └── Telco_Churn_Dashboard.pbix      # Power BI dashboard
-│
-├── data/
-│   └── Telco_customer_churn.csv        # Source dataset
+│   └── Telco_Churn_Dashboard.pbix
 ├── reports/
-│   └── feature_importance.png          # Feature importance chart
+│   └── feature_importance.png
 │
 ├── src/
-│   ├── eda.py                          # Exploratory Data Analysis
-│   ├── preprocess.py                   # Data cleaning & preprocessing
-│   ├── train_test_split.py             # Train/test split
-│   ├── train_model.py                  # Random Forest training
-│   ├── tune_model.py                   # Hyperparameter tuning
-│   ├── evaluate.py                     # Model evaluation
-│   ├── feature_importance.py           # Feature importance generation
-│   └── predict.py                      # Churn prediction for new customers
+│   ├── eda.py
+│   ├── preprocess.py
+│   ├── train_test_split.py
+│   ├── train_model.py
+│   ├── tune_model.py
+│   ├── evaluate.py
+│   ├── feature_importance.py
+│   └── predict.py
 │
-├── .gitignore
 ├── requirements.txt
-└── README.md
+├── README.md
+└── .gitignore
 ```
 
 ---
 
-## 📊 Dataset
+# 🔄 Machine Learning Workflow
 
-**Dataset:** Telco Customer Churn (Kaggle)
-
-### Shape
-
-* **Rows:** 7,043
-* **Columns:** 21
-
-### Available Fields
-
-| Column           | Description                          |
-| ---------------- | ------------------------------------ |
-| customerID       | Unique customer identifier           |
-| gender           | Customer gender                      |
-| SeniorCitizen    | Whether customer is a senior citizen |
-| Partner          | Whether customer has a partner       |
-| Dependents       | Whether customer has dependents      |
-| tenure           | Number of months with the company    |
-| PhoneService     | Whether phone service is subscribed  |
-| MultipleLines    | Multiple phone lines subscription    |
-| InternetService  | Internet service type                |
-| OnlineSecurity   | Online security subscription         |
-| OnlineBackup     | Online backup subscription           |
-| DeviceProtection | Device protection subscription       |
-| TechSupport      | Tech support subscription            |
-| StreamingTV      | Streaming TV subscription            |
-| StreamingMovies  | Streaming movies subscription        |
-| Contract         | Contract type                        |
-| PaperlessBilling | Paperless billing status             |
-| PaymentMethod    | Payment method                       |
-| MonthlyCharges   | Monthly bill amount                  |
-| TotalCharges     | Total charges to date                |
-| Churn            | Target variable (Yes/No)             |
-
----
-
-## 📈 Power BI Dashboard
-
-### Dashboard KPIs
-
-| KPI                   |       Value |
-| --------------------- | ----------: |
-| Total Customers       |      **7K** |
-| Churned Customers     |      **2K** |
-| Total Monthly Revenue | **456.12K** |
-| Churn Rate            |  **26.54%** |
-
-### Visualizations Included
-
-1. **KPI Cards** – Total customers, churned customers, monthly revenue, and churn rate.
-2. **Donut Chart** – Distribution of churned vs retained customers.
-3. **Horizontal Bar Chart** – Churned customers by **Contract** type.
-4. **Payment Method Slicer** – Filter all visuals by payment method.
-
-### Key Insight
-
-* **Month-to-month contracts account for the overwhelming majority of churned customers**, while one-year and two-year contracts show significantly lower churn.
-
----
-
-## 🤖 Machine Learning Pipeline
-
-```text
-Raw CSV
-   ↓
-Data Cleaning & Type Conversion
-   ↓
-Categorical Encoding
-   ↓
-Train/Test Split
-   ↓
-Random Forest Training
-   ↓
-Hyperparameter Tuning (GridSearchCV)
-   ↓
-Model Evaluation
-   ↓
-Feature Importance Analysis
-   ↓
-Prediction on New Customer Data
+```
+IBM Telco Customer Churn Dataset
+                │
+                ▼
+       Data Preprocessing
+                │
+                ▼
+ Exploratory Data Analysis (EDA)
+                │
+                ▼
+      Feature Engineering
+                │
+                ▼
+        Train-Test Split
+                │
+                ▼
+   Random Forest Model Training
+                │
+                ▼
+     Hyperparameter Tuning
+                │
+                ▼
+       Model Evaluation
+                │
+                ▼
+    Feature Importance Analysis
+                │
+                ▼
+ Customer Churn Prediction
+                │
+                ▼
+      Power BI Dashboard
 ```
 
 ---
 
-## 🚀 How to Run
+# 📊 Dataset
 
-### 1️⃣ Clone the repository
+This project uses the **IBM Telco Customer Churn Dataset**, containing **7,043 customer records** and **33 features** describing customer demographics, geographic information, subscribed services, billing details, customer lifetime value, and churn status.
+
+### Dataset Features
+
+| Category | Features |
+| :--- | :--- |
+| **Customer Information** | CustomerID, Count, Gender, Senior Citizen, Partner, Dependents |
+| **Geographic Information** | Country, State, City, Zip Code, Latitude, Longitude, Lat Long |
+| **Account Information** | Tenure Months, Contract, Paperless Billing, Payment Method |
+| **Services** | Phone Service, Multiple Lines, Internet Service, Online Security, Online Backup, Device Protection, Tech Support, Streaming TV, Streaming Movies |
+| **Billing** | Monthly Charges, Total Charges |
+| **Churn Information** | Churn Label, Churn Value, Churn Score, Churn Reason |
+| **Customer Value** | CLTV (Customer Lifetime Value) |
+
+### Target Variable
+
+- **Churn Value**
+  - 0 → Customer Retained
+  - 1 → Customer Churned
+
+> **Note:** Features such as **Churn Label**, **Churn Score**, and **Churn Reason** were excluded during model training to prevent data leakage.
+
+---
+
+# 🔍 Exploratory Data Analysis
+
+EDA was performed to understand customer behavior and identify important patterns before model training.
+
+Key analyses included:
+
+- Missing value detection
+- Distribution of categorical and numerical features
+- Churn distribution
+- Contract type analysis
+- Payment method analysis
+- Monthly charges analysis
+- Correlation analysis
+- Class imbalance analysis
+
+---
+
+# 🤖 Machine Learning Model
+
+### Algorithm Used
+
+✅ Random Forest Classifier
+
+Random Forest was selected because it:
+
+- Performs well on structured tabular datasets.
+- Handles categorical and numerical variables effectively.
+- Reduces overfitting using ensemble learning.
+- Provides feature importance scores for model interpretation.
+- Delivers strong classification performance with minimal preprocessing.
+
+### Hyperparameter Tuning
+
+Model performance was improved using **GridSearchCV**, which optimized parameters such as:
+
+- Number of Estimators
+- Maximum Depth
+- Minimum Samples Split
+- Minimum Samples Leaf
+
+---
+
+# 📈 Model Evaluation
+
+The model was evaluated using standard classification metrics:
+
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- ROC-AUC Score
+- Confusion Matrix
+
+Feature importance was also generated to identify the variables with the highest impact on customer churn.
+
+---
+
+# 📊 Power BI Dashboard
+
+The project includes an interactive **Customer Churn & Retention Analytics Dashboard** designed for business users.
+
+## Dashboard KPIs
+
+- 👥 Total Customers
+- ❌ Churned Customers
+- 💰 Total Monthly Revenue
+- 📉 Overall Churn Rate
+
+## Dashboard Visualizations
+
+- Customer Churn Distribution (Donut Chart)
+- Churned Customers by Contract Type (Horizontal Bar Chart)
+- Payment Method Interactive Slicer
+- KPI Summary Cards
+
+The dashboard enables business users to monitor customer churn, analyze churn by contract type, and interactively filter customers by payment method for deeper insights.
+
+---
+
+# 💡 Key Insights
+
+- Approximately **26.54%** of customers have churned.
+- Customers with **Month-to-Month contracts** exhibit the highest churn rate.
+- **One-Year** and **Two-Year** contracts have significantly lower churn.
+- The dashboard enables dynamic filtering based on payment methods for customer segmentation.
+- Long-term contracts contribute to improved customer retention.
+
+---
+
+# 🚀 Installation
+
+## Clone Repository
 
 ```bash
-git clone https://github.com/raoopriyanka/customer-churn-prediction.git
-cd churn-prediction
+git clone https://github.com/yourusername/Telecom-Customer-Churn-Prediction.git
 ```
 
-### 2️⃣ Create and activate a virtual environment
-
-**Windows**
+## Navigate to Project
 
 ```bash
-python -m venv venv
-venv\Scripts\activate
+cd Telecom-Customer-Churn-Prediction
 ```
 
-**macOS / Linux**
-
-```bash
-python -m venv venv
-source venv/bin/activate
-```
-
-### 3️⃣ Install dependencies
+## Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4️⃣ Run the pipeline
+---
+
+# ▶️ Running the Project
+
+### Data Preprocessing
 
 ```bash
-# Preprocess data
 python src/preprocess.py
+```
 
-# Train model
+### Train-Test Split
+
+```bash
+python src/train_test_split.py
+```
+
+### Train Random Forest Model
+
+```bash
 python src/train_model.py
+```
 
-# Tune hyperparameters
+### Hyperparameter Tuning
+
+```bash
 python src/tune_model.py
+```
 
-# Evaluate model
+### Evaluate Model
+
+```bash
 python src/evaluate.py
+```
 
-# Generate feature importance plot
+### Generate Feature Importance
+
+```bash
 python src/feature_importance.py
+```
 
-# Predict churn for new customer data
+### Predict New Customer
+
+```bash
 python src/predict.py
 ```
 
 ---
 
-## 📊 Example Dashboard Insights
+# 📷 Dashboard Preview
 
-* **73.46%** of customers were retained (**5.17K** customers).
-* **26.54%** of customers churned (**1.87K** customers).
-* Churn is heavily concentrated among **month-to-month** contract customers.
-* The payment method slicer allows targeted analysis of churn patterns across different payment types.
+> Add the following screenshot inside the `screenshots/` folder.
+
+```
+screenshots/dashboard.png
+```
+
+Example Dashboard Components:
+
+- KPI Cards
+- Churn Distribution
+- Contract-wise Churn Analysis
+- Interactive Payment Method Filter
 
 ---
 
-## 🔮 Future Enhancements
+# 📈 Future Enhancements
 
-* Deploy the model using **FastAPI** or **Flask**.
-* Build a **Streamlit** web application.
-* Add **SHAP** explainability for individual predictions.
-* Compare Random Forest with **XGBoost** and **LightGBM**.
-* Automate the pipeline with **CI/CD** and Docker.
+- Deploy the model using Flask or FastAPI.
+- Develop an interactive Streamlit web application.
+- Compare Random Forest with XGBoost, LightGBM, and CatBoost.
+- Integrate SHAP for Explainable AI (XAI).
+- Dockerize the application.
+- Deploy on AWS, Azure, or Google Cloud.
+- Build a real-time prediction API.
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
 
 ---
 
