@@ -232,7 +232,7 @@ The dashboard enables business users to monitor customer churn, analyze churn by
 ## Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/Telecom-Customer-Churn-Prediction.git
+git clone https://github.com/raoopriyanka/customer-churn-prediction.git
 ```
 
 ## Navigate to Project
@@ -295,14 +295,6 @@ python src/predict.py
 
 ---
 
-# 📷 Dashboard Preview
-
-> Add the following screenshot inside the `screenshots/` folder.
-
-```
-screenshots/dashboard.png
-```
-
 Example Dashboard Components:
 
 - KPI Cards
@@ -323,10 +315,6 @@ Example Dashboard Components:
 - Build a real-time prediction API.
 
 ---
-
-# 📄 License
-
-This project is licensed under the MIT License.
 
 ---
 
