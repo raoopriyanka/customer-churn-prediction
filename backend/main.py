@@ -4,6 +4,7 @@ from pydantic import BaseModel
 import joblib
 import pandas as pd
 import os
+import uvicorn
 
 app = FastAPI(
     title="Telco Customer Churn Prediction API",
@@ -118,3 +119,7 @@ def predict_churn(data: CustomerData):
         }
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port)
