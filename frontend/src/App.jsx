@@ -53,8 +53,11 @@ function App() {
     setLoading(true);
     setError(null);
 
+    // Use environment variable for production deployment, fallback to localhost for development
+    const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://127.0.0.1:8000';
+
     try {
-      const response = await axios.post('http://127.0.0.1:8000/predict', formData);
+      const response = await axios.post(`${API_BASE_URL}/predict`, formData);
       setResult(response.data);
     } catch (err) {
       console.error(err);
