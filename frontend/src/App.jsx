@@ -54,8 +54,10 @@ function App() {
     setError(null);
 //trigger rebuild
     // Use environment variable for production deployment, fallback to localhost for development
-    // const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://127.0.0.1:8000';
-    const API_BASE_URL = 'https://customer-churn-ukyg.onrender.com';
+    // eslint-disable-next-line no-undef
+    const API_BASE_URL = import.meta.env.REACT_APP_API_URL || 'http://127.0.0.1:8000';
+    // const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://customer-churn-ukyg.onrender.com';
+    // const API_BASE_URL = 'https://customer-churn-ukyg.onrender.com';
 
     try {
       const response = await axios.post(`${API_BASE_URL}/predict`, formData);
