@@ -52,7 +52,7 @@ function App() {
     e.preventDefault();
     setLoading(true);
     setError(null);
-
+//trigger rebuild
     // Use environment variable for production deployment, fallback to localhost for development
     const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://127.0.0.1:8000';
 
